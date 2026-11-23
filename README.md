@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Cloud & DevOps Engineering Portfolio
 
-First, run the development server:
+Welcome to my engineering portfolio. This repository showcases my work, hands-on projects, and continuous learning in Cloud Engineering, DevOps, Software Engineering, and intelligent systems.
+
+I focus on building reliable, secure, scalable, and maintainable systems by combining software development with cloud infrastructure, automation, and modern DevOps practices.
+
+## About Me
+
+I am a Software Engineer with experience in application development, backend systems, database technologies, and modern web development. I am expanding my expertise in Cloud Engineering and DevOps, with a focus on infrastructure automation, containerization, CI/CD, cloud architecture, reliability, and security.
+
+My goal is to bridge software development and infrastructure operations to deliver production-minded engineering solutions.
+
+## Technical Focus
+
+### Cloud & DevOps
+- AWS cloud services and cloud architecture
+- Docker containerization
+- Kubernetes orchestration
+- CI/CD pipelines with GitHub Actions
+- Linux administration
+- Infrastructure automation
+- Monitoring and observability
+- Cloud networking and security
+
+### Software Engineering
+- Python and FastAPI
+- Node.js and Express
+- JavaScript and TypeScript
+- React.js and Next.js
+- REST API development
+- Microservices architecture
+
+### Databases
+- PostgreSQL
+- Microsoft SQL Server
+- Database design, optimization, and administration
+
+### AI & Intelligent Systems
+- Machine Learning fundamentals
+- AI-powered applications
+- Retrieval-Augmented Generation (RAG)
+- Intelligent automation
+
+## Portfolio Projects
+
+This portfolio will contain practical projects documenting the architecture, implementation, challenges, and engineering decisions behind each solution.
+
+Projects will cover areas such as:
+
+- Cloud infrastructure deployment
+- CI/CD automation
+- Containerization and orchestration
+- Infrastructure as Code
+- Monitoring and observability
+- Secure cloud architecture
+- Application deployment and operations
+
+Each case study will include relevant architecture diagrams, technologies used, implementation details, and repository links where available.
+
+## Technology Stack
+
+| Area | Technologies |
+|---|---|
+| Cloud | AWS |
+| Operating Systems | Linux, Ubuntu |
+| Containers | Docker |
+| Orchestration | Kubernetes |
+| CI/CD | GitHub Actions |
+| Frontend | React, Next.js |
+| Backend | Python, FastAPI, Node.js, Express |
+| Databases | PostgreSQL, SQL Server |
+| Version Control | Git, GitHub |
+| Monitoring | Prometheus, Grafana |
+| Automation | Shell scripting, Infrastructure as Code |
+
+## Running Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### Clone the repository
+
+```bash
+git clone git@github.com:shemavalentin/my-cloud-devops-portfolio.git
+cd my-cloud-devops-portfolio
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development Workflow
 
-## Learn More
+This portfolio is developed using a milestone-based workflow:
 
-To learn more about Next.js, take a look at the following resources:
+1. Develop and test locally.
+2. Review changes.
+3. Commit changes with meaningful messages.
+4. Push changes to GitHub.
+5. Automate quality checks using CI/CD.
+6. Deploy and validate the production version.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [x] Initial portfolio setup
+- [x] Initial homepage design
+- [ ] Refine responsive design and accessibility
+- [ ] Create detailed engineering project case studies
+- [ ] Add project architecture diagrams
+- [ ] Implement GitHub Actions CI
+- [ ] Containerize the portfolio application
+- [ ] Deploy to AWS
+- [ ] Implement deployment automation
+- [ ] Add monitoring and observability
 
-## Deploy on Vercel
+## Connect
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GitHub: [@shemavalentin](https://github.com/shemavalentin)
+- LinkedIn: Add profile link
+- Email: Add professional contact email
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+This portfolio is continuously evolving as I develop my skills, build projects, and explore modern engineering practices.
