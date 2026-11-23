@@ -300,13 +300,13 @@ export default function Home() {
           Open to engineering opportunities, meaningful collaborations
           and challenging cloud &amp; DevOps projects.
         </p>
-        <a href="mailto:your-email@example.com" className="primary-button">
+        <a href="mailto:shemavalentin@gmail.com" className="primary-button">
           Get in Touch <ArrowRight size={17} />
         </a>
       </section>
 
       <footer className="footer">
-        <p>© 2026 Valentin Shema <span>·</span> Cloud &amp; DevOps Engineering</p>
+        <p>© 2026 NIWEBASA Valenitn<span>·</span> Cloud &amp; DevOps Engineering</p>
       </footer>
     </main>
   );
