@@ -579,6 +579,26 @@ a {
   border-color: var(--border-blue);
 }
 
+
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
+.project-card-link .project-card {
+  height: 100%;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card-link:hover .project-card {
+  border-color: #60a5fa;
+  transform: translateY(-4px);
+}
+
+
 .project-card-top {
   display: flex;
   justify-content: space-between;
@@ -906,4 +926,294 @@ a {
     min-width: 55px;
     font-size: 9px;
   }
+
 }
+
+
+/* =========================================
+   PROJECT CASE STUDY PAGE
+========================================= */
+
+.case-study-page {
+  min-height: 100vh;
+  background: #07111f;
+  color: #e8eef8;
+  padding: 48px 24px 100px;
+}
+
+.case-study-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #9aacc3;
+  font-size: 14px;
+  margin-bottom: 72px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #60a5fa;
+}
+
+.case-study-hero {
+  max-width: 850px;
+  margin-bottom: 110px;
+}
+
+.eyebrow,
+.section-label {
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+.case-study-hero h1 {
+  font-size: clamp(46px, 7vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin: 0 0 28px;
+  font-weight: 750;
+}
+
+.case-study-hero h1 span {
+  color: #60a5fa;
+}
+
+.case-study-intro {
+  max-width: 690px;
+  color: #9aacc3;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 21px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid #263b56;
+  color: #d7e4f5;
+}
+
+.secondary-button:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.project-overview,
+.architecture-section,
+.technology-section,
+.engineering-section {
+  border-top: 1px solid #1d2c40;
+  padding: 65px 0;
+}
+
+.project-overview {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+}
+
+.case-study-page h2 {
+  font-size: clamp(27px, 4vw, 36px);
+  letter-spacing: -1px;
+  margin: 16px 0 0;
+}
+
+.project-overview p,
+.section-heading > p {
+  color: #9aacc3;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 38px;
+}
+
+.section-heading > p {
+  max-width: 390px;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.architecture-card {
+  background: #0c1a2b;
+  border: 1px solid #1d314b;
+  border-radius: 10px;
+  padding: 27px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.architecture-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-3px);
+}
+
+.architecture-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  color: #60a5fa;
+  background: #142b48;
+  border-radius: 9px;
+  margin-bottom: 23px;
+}
+
+.architecture-card h3,
+.engineering-grid h3 {
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.architecture-card p,
+.engineering-grid p {
+  color: #91a4bc;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.technology-chip {
+  border: 1px solid #263b56;
+  background: #0c1a2b;
+  color: #b8c9df;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.engineering-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 38px;
+}
+
+.engineering-grid article > svg {
+  color: #60a5fa;
+  margin-bottom: 20px;
+}
+
+.case-study-next {
+  border: 1px solid #244267;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0d2037, #091525);
+  padding: 55px;
+  margin-top: 35px;
+}
+
+.case-study-next p {
+  color: #9aacc3;
+  max-width: 650px;
+  line-height: 1.8;
+  margin: 20px 0 28px;
+}
+
+@media (max-width: 760px) {
+  .case-study-page {
+    padding: 30px 20px 70px;
+  }
+
+  .back-link {
+    margin-bottom: 55px;
+  }
+
+  .case-study-hero {
+    margin-bottom: 75px;
+  }
+
+  .case-study-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .project-overview {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 18px;
+  }
+
+  .architecture-grid,
+  .engineering-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-next {
+    padding: 30px 24px;
+  }
+}
+
+
+
+
+

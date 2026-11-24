@@ -26,14 +26,16 @@ const technologies = [
   "PostgreSQL",
 ];
 
+
 const projects = [
   {
     number: "01",
-    category: "CLOUD INFRASTRUCTURE",
-    title: "AWS High Availability Architecture",
+    category: "APPLICATION DELIVERY & DEVOPS",
+    title: "E-Recruitment & Resume Portal",
     description:
-      "Designing resilient AWS environments with networking, load balancing, private subnets, managed databases and secure infrastructure.",
-    stack: ["AWS", "VPC", "RDS", "ALB", "Terraform"],
+      "A recruitment platform case study exploring application delivery, containerization, cloud hosting, infrastructure design and DevOps automation.",
+    stack: ["Next.js", "Docker", "AWS", "GitHub Actions"],
+    href: "/projects/e-recruitment",
   },
   {
     number: "02",
@@ -42,6 +44,7 @@ const projects = [
     description:
       "Building automated delivery workflows that test, build, package and deploy applications using modern CI/CD practices.",
     stack: ["GitHub Actions", "Docker", "ECR", "AWS"],
+    href: "/projects/cicd-platform",
   },
   {
     number: "03",
@@ -50,8 +53,10 @@ const projects = [
     description:
       "Exploring container orchestration, declarative deployments, service discovery, scaling and platform observability.",
     stack: ["Kubernetes", "Docker", "Helm", "Prometheus"],
+    href: "/projects/kubernetes-platform",
   },
 ];
+
 
 export default function Home() {
   return (
@@ -66,7 +71,7 @@ export default function Home() {
         <nav className="nav-links">
           <Link href="#about">About</Link>
           <Link href="#technologies">Skills</Link>
-          <Link href="#projects">Projects</Link>
+          <Link href="/#projects">Projects</Link>
           <Link href="#contact">Contact</Link>
         </nav>
 
@@ -272,23 +277,36 @@ export default function Home() {
         </p>
 
         <div className="project-grid">
+               
+          
           {projects.map((project) => (
-            <article className="project-card" key={project.number}>
-              <div className="project-card-top">
-                <span className="project-number">{project.number}</span>
-                <ArrowRight size={17} />
-              </div>
-              <span className="project-category">{project.category}</span>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-stack">
-                {project.stack.map((technology) => (
-                  <span key={technology}>{technology}</span>
-                ))}
-              </div>
-              <span className="project-status">LAB / CASE STUDY</span>
-            </article>
-          ))}
+            <Link
+              key={project.title}
+              href={project.href}
+              className="project-card-link"
+            >
+              <article className="project-card">
+                <div className="project-card-top">
+                  <span className="project-number">{project.number}</span>
+                  <ArrowRight size={17} />
+                </div>
+
+                <span className="project-category">{project.category}</span>
+
+                <h3>{project.title}</h3>
+
+                <p>{project.description}</p>
+
+                <div className="project-stack">
+                  {project.stack.map((technology) => (
+                    <span key={technology}>{technology}</span>
+                  ))}
+                </div>
+
+                <span className="project-status">LAB / CASE STUDY</span>
+              </article>
+            </Link>
+          ))}          
         </div>
       </section>
 
