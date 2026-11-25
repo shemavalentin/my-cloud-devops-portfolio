@@ -1214,6 +1214,519 @@ a {
 }
 
 
+/* =========================================
+   E-RECRUITMENT ARCHITECTURE FLOW
+========================================= */
+
+.architecture-flow-section {
+  margin: 55px 0 35px;
+  padding: 0 0 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.architecture-flow-description {
+  color: var(--text-secondary);
+  max-width: 850px;
+  line-height: 1.8;
+  margin: 18px 0 40px;
+}
+
+.architecture-flow {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Individual architecture nodes */
+.flow-node {
+  flex: 1;
+  min-width: 0;
+  padding: 22px 16px;
+  background: linear-gradient(145deg, #111c2e, #0c1422);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.flow-node:hover {
+  border-color: #60a5fa;
+  transform: translateY(-3px);
+}
+
+.flow-node-highlight {
+  border-color: rgba(96, 165, 250, 0.45);
+  background: linear-gradient(
+    145deg,
+    rgba(30, 64, 110, 0.45),
+    #0c1422
+  );
+}
+
+.flow-node-label {
+  color: #60a5fa;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.flow-node h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.flow-node p {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Connectors between architecture nodes */
+.flow-connector {
+  flex: 0 0 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #60a5fa;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.flow-connector::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgba(96, 165, 250, 0.45);
+  position: relative;
+}
+
+/* Responsive architecture flow */
+@media (max-width: 1100px) {
+  .architecture-flow {
+    flex-wrap: wrap;
+  }
+
+  .flow-node {
+    flex: 1 1 28%;
+  }
+
+  .flow-connector {
+    flex: 0 0 35px;
+  }
+}
+
+@media (max-width: 760px) {
+  .architecture-flow-section {
+    margin: 60px 0;
+  }
+
+  .architecture-flow {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .flow-node {
+    width: 100%;
+    flex: none;
+    padding: 22px;
+  }
+
+  .flow-connector {
+    height: 65px;
+    flex: none;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .flow-connector::after {
+    width: 2px;
+    height: 28px;
+  }
+}
+
+
+/* =========================================
+   VPC & SUBNET ARCHITECTURE
+========================================= */
+
+.flow-vpc {
+  flex: 1 1 100%;
+  min-width: 0;
+  padding: 24px;
+  margin-top: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(15, 32, 54, 0.65),
+    rgba(8, 16, 29, 0.85)
+  );
+}
+
+.flow-vpc-header {
+  margin-bottom: 24px;
+}
+
+.flow-vpc-header h3 {
+  font-size: 1.4rem;
+  color: #f1f5f9;
+  margin: 10px 0;
+}
+
+.flow-vpc-header p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.flow-subnets {
+  display: grid;
+  grid-template-columns: 1fr 70px 1fr 70px 1fr;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.flow-subnet {
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.flow-subnet-public {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.flow-subnet-private {
+  background: rgba(96, 165, 250, 0.04);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.flow-subnet-data {
+  background: rgba(168, 85, 247, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.flow-subnet-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: var(--text-secondary);
+}
+
+.flow-subnet .flow-node {
+  height: 100%;
+}
+
+.flow-subnet-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #60a5fa;
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+.flow-subnet-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(96, 165, 250, 0.45);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .flow-subnets {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .flow-subnet-connector {
+    min-height: 42px;
+  }
+
+  .flow-subnet-line {
+    width: 2px;
+    height: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .flow-vpc {
+    padding: 16px;
+  }
+
+  .flow-vpc-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .flow-subnet {
+    padding: 12px;
+  }
+}
+
+
+/* =========================================
+   ARCHITECTURE FLOW LAYOUT FIX
+========================================= */
+
+/* Main flow now stacks entry row and VPC */
+.architecture-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+/* Users, DNS and CloudFront get their own row */
+.flow-entry-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 60px
+                         minmax(150px, 1fr) 60px
+                         minmax(150px, 1fr);
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Keep entry cards from shrinking into narrow columns */
+.flow-entry-row .flow-node {
+  min-width: 0;
+  width: 100%;
+  min-height: 185px;
+  flex: initial;
+  padding: 24px;
+}
+
+/* Horizontal connectors between entry cards */
+.flow-entry-row .flow-connector {
+  flex: initial;
+  min-width: 0;
+  width: 100%;
+  align-self: center;
+}
+
+/* CloudFront traffic connects down into the VPC */
+.flow-vpc-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #60a5fa;
+  font-size: 0.72rem;
+  margin: -10px 0;
+}
+
+.flow-vpc-entry-line {
+  height: 28px;
+  width: 2px;
+  background: rgba(96, 165, 250, 0.55);
+}
+
+/* VPC always takes full available width */
+.architecture-flow > .flow-vpc {
+  width: 100%;
+  flex: none;
+  min-width: 0;
+  margin-top: 0;
+}
+
+/* Tablet layout */
+@media (max-width: 1000px) {
+  .flow-entry-row {
+    grid-template-columns: minmax(0, 1fr) 45px
+                           minmax(0, 1fr) 45px
+                           minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .flow-entry-row .flow-node {
+    padding: 18px 14px;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+  .flow-entry-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .flow-entry-row .flow-node {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .flow-entry-row .flow-connector {
+    min-height: 58px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .flow-entry-row .flow-connector::after {
+    width: 2px;
+    height: 28px;
+  }
+
+  .flow-vpc-entry {
+    margin: 0;
+  }
+}
+
+
+/* =========================================
+   ECS TARGET GROUP
+========================================= */
+
+.flow-target-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.flow-target-arrow {
+  color: #60a5fa;
+  font-size: 1.2rem;
+}
+
+.flow-target-box {
+  width: 100%;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 9px;
+  background: rgba(96, 165, 250, 0.06);
+  padding: 15px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flow-target-box h4 {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.flow-target-box p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.flow-port {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgba(96, 165, 250, 0.1);
+  color: #93c5fd;
+  font-size: 0.68rem;
+}
+
+
+
+/* =========================================
+   SECURITY GROUP TRAFFIC RULES
+========================================= */
+
+.security-flow-section {
+  margin: 55px 0;
+}
+
+.security-flow-description {
+  max-width: 850px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 18px 0 30px;
+}
+
+.security-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.security-rule-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #111c2e, #0c1422);
+  padding: 22px;
+}
+
+.security-rule-number {
+  display: inline-block;
+  color: #60a5fa;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 15px;
+}
+
+.security-rule-card h3 {
+  color: #f1f5f9;
+  font-size: 1.05rem;
+  margin: 0 0 20px;
+}
+
+.security-rule {
+  border-top: 1px solid var(--border);
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.security-rule > span {
+  color: #60a5fa;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.security-rule strong {
+  color: #e2e8f0;
+  font-size: 0.85rem;
+}
+
+.security-rule p {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .security-rules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 
 
 
