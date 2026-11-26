@@ -270,7 +270,7 @@ export default function Home() {
       {/* Projects */}
       <section className="content-section container" id="projects">
         <p className="section-label">SELECTED WORK</p>
-        <h2>Projects &amp; implementations.</h2>
+        <h2>Projects and implementations.</h2>
         <p className="section-description">
           Practical engineering work, cloud labs and implementation projects
           demonstrating how I approach infrastructure, automation and delivery.
